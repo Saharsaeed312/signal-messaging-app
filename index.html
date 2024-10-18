@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Signal Messaging App</title>
+    <script>
+        function check() {
+            const selectedColor = document.querySelector('input[name="color"]:checked');
+            const result = document.getElementById('result');
+            if (selectedColor) {
+                if (selectedColor.value === 'red') {
+                    result.textContent = 'Stop her.';
+                } else if (selectedColor.value === 'yellow') {
+                    result.textContent = 'Ready to move.';
+                } else if (selectedColor.value === 'green') {
+                    result.textContent = 'Move now.';
+                }
+            } else {
+                result.textContent = 'Please select a color.';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Signal Messaging App</h1>
+        <form>
+            <label class="radio-container">
+                <input type="radio" name="color" value="red">
+                <span class="radio-button"></span>
+                Red
+            </label>
+            <label class="radio-container">
+                <input type="radio" name="color" value="green">
+                <span class="radio-button"></span>
+                Green
+            </label>
+            <label class="radio-container">
+                <input type="radio" name="color" value="yellow">
+                <span class="radio-button"></span>
+                Yellow
+            </label>
+        </form>
+        <button onclick="check()">Check</button>
+        <p id="result"></p>
+    </div>
+</body>
+</html>

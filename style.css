@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.container {
+    background-color: #fff; 
+    border: 1px solid #ccc;
+    border-radius: 8px; 
+    padding: 20px; 
+    max-width: 400px; 
+    margin: 20px auto; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+h1 {
+    text-align: center; /* Center the heading */
+}
+
+.radio-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    display: none; /* Hide the default radio button */
+}
+
+.radio-button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+}
+
+input[type="radio"]:checked + .radio-button {
+    border-color: transparent;
+}
+
+input[type="radio"][value="red"]:checked + .radio-button {
+    background-color: red;
+}
+
+input[type="radio"][value="green"]:checked + .radio-button {
+    background-color: green;
+}
+
+input[type="radio"][value="yellow"]:checked + .radio-button {
+    background-color: yellow;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    margin-top: 20px;
+    font-weight: bold;
+}
